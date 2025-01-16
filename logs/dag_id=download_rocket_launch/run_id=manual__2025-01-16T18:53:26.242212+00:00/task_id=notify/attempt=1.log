@@ -1,0 +1,32 @@
+[2025-01-16T18:54:00.588+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-16T18:54:00.609+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: download_rocket_launch.notify manual__2025-01-16T18:53:26.242212+00:00 [queued]>
+[2025-01-16T18:54:00.620+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: download_rocket_launch.notify manual__2025-01-16T18:53:26.242212+00:00 [queued]>
+[2025-01-16T18:54:00.620+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-16T18:54:00.637+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): notify> on 2025-01-16 18:53:26.242212+00:00
+[2025-01-16T18:54:00.646+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=934) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-16T18:54:00.648+0000] {standard_task_runner.py:72} INFO - Started process 936 to run task
+[2025-01-16T18:54:00.649+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launch', 'notify', 'manual__2025-01-16T18:53:26.242212+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/download_rocket_launch.py', '--cfg-path', '/tmp/tmpkeo58q7g']
+[2025-01-16T18:54:00.650+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask notify
+[2025-01-16T18:54:00.922+0000] {task_command.py:467} INFO - Running <TaskInstance: download_rocket_launch.notify manual__2025-01-16T18:53:26.242212+00:00 [running]> on host d8d64a3123f2
+[2025-01-16T18:54:01.062+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='download_rocket_launch' AIRFLOW_CTX_TASK_ID='notify' AIRFLOW_CTX_EXECUTION_DATE='2025-01-16T18:53:26.242212+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-16T18:53:26.242212+00:00'
+[2025-01-16T18:54:01.064+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-16T18:54:01.064+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-16T18:54:01.065+0000] {logging_mixin.py:190} INFO - Current task name:notify state:running start_date:2025-01-16 18:54:00.609772+00:00
+[2025-01-16T18:54:01.065+0000] {logging_mixin.py:190} INFO - Dag name:download_rocket_launch and current dag run status:running
+[2025-01-16T18:54:01.065+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-16T18:54:01.066+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-16T18:54:01.068+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "There are now $(ls /tmp/images | wc -l) images."']
+[2025-01-16T18:54:01.090+0000] {subprocess.py:99} INFO - Output:
+[2025-01-16T18:54:01.096+0000] {subprocess.py:106} INFO - There are now 7 images.
+[2025-01-16T18:54:01.097+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-16T18:54:01.132+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-16T18:54:01.133+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=download_rocket_launch, task_id=notify, run_id=manual__2025-01-16T18:53:26.242212+00:00, execution_date=20250116T185326, start_date=20250116T185400, end_date=20250116T185401
+[2025-01-16T18:54:01.150+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-16T18:54:01.151+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-16T18:54:01.151+0000] {logging_mixin.py:190} INFO - Dag name:download_rocket_launch queued_at:2025-01-16 18:53:26.275026+00:00
+[2025-01-16T18:54:01.151+0000] {logging_mixin.py:190} INFO - Task hostname:d8d64a3123f2 operator:BashOperator
+[2025-01-16T18:54:01.189+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-16T18:54:01.381+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-16T18:54:01.384+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

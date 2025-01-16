@@ -1,0 +1,38 @@
+[2025-01-16T18:53:34.379+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-16T18:53:34.400+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: download_rocket_launch.get_pictures manual__2025-01-16T18:53:26.242212+00:00 [queued]>
+[2025-01-16T18:53:34.411+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: download_rocket_launch.get_pictures manual__2025-01-16T18:53:26.242212+00:00 [queued]>
+[2025-01-16T18:53:34.412+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-16T18:53:34.431+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): get_pictures> on 2025-01-16 18:53:26.242212+00:00
+[2025-01-16T18:53:34.440+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=930) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-16T18:53:34.441+0000] {standard_task_runner.py:72} INFO - Started process 932 to run task
+[2025-01-16T18:53:34.442+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'download_rocket_launch', 'get_pictures', 'manual__2025-01-16T18:53:26.242212+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/download_rocket_launch.py', '--cfg-path', '/tmp/tmpmmxxkmwh']
+[2025-01-16T18:53:34.443+0000] {standard_task_runner.py:105} INFO - Job 9: Subtask get_pictures
+[2025-01-16T18:53:34.722+0000] {task_command.py:467} INFO - Running <TaskInstance: download_rocket_launch.get_pictures manual__2025-01-16T18:53:26.242212+00:00 [running]> on host d8d64a3123f2
+[2025-01-16T18:53:34.814+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='download_rocket_launch' AIRFLOW_CTX_TASK_ID='get_pictures' AIRFLOW_CTX_EXECUTION_DATE='2025-01-16T18:53:26.242212+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-16T18:53:26.242212+00:00'
+[2025-01-16T18:53:34.815+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-16T18:53:34.815+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-16T18:53:34.816+0000] {logging_mixin.py:190} INFO - Current task name:get_pictures state:running start_date:2025-01-16 18:53:34.400808+00:00
+[2025-01-16T18:53:34.816+0000] {logging_mixin.py:190} INFO - Dag name:download_rocket_launch and current dag run status:running
+[2025-01-16T18:53:34.816+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-16T18:53:37.312+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/new_glenn_on_lc_image_20250111175645.jpg to /tmp/images
+[2025-01-16T18:53:39.904+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_20250111100520.jpg to /tmp/images
+[2025-01-16T18:53:41.882+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long2520march25202d_image_20190222031211.jpeg to /tmp/images
+[2025-01-16T18:53:45.076+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png to /tmp/images
+[2025-01-16T18:53:47.433+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png to /tmp/images
+[2025-01-16T18:53:50.053+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png to /tmp/images
+[2025-01-16T18:53:52.454+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png to /tmp/images
+[2025-01-16T18:53:53.483+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/gslv2520mk252_image_20240101090337.jpg to /tmp/images
+[2025-01-16T18:53:55.717+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg to /tmp/images
+[2025-01-16T18:53:57.740+0000] {logging_mixin.py:190} INFO - Downloaded https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg to /tmp/images
+[2025-01-16T18:53:57.741+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-16T18:53:57.752+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-16T18:53:57.753+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=download_rocket_launch, task_id=get_pictures, run_id=manual__2025-01-16T18:53:26.242212+00:00, execution_date=20250116T185326, start_date=20250116T185334, end_date=20250116T185357
+[2025-01-16T18:53:57.765+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-16T18:53:57.765+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-16T18:53:57.765+0000] {logging_mixin.py:190} INFO - Dag name:download_rocket_launch queued_at:2025-01-16 18:53:26.275026+00:00
+[2025-01-16T18:53:57.766+0000] {logging_mixin.py:190} INFO - Task hostname:d8d64a3123f2 operator:PythonOperator
+[2025-01-16T18:53:57.802+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-16T18:53:57.831+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-16T18:53:57.833+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
